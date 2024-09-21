@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  #get "home/index"
+
+  root "home#index" # Sets this as the home default page so no need for home/index path in URL
+  
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
