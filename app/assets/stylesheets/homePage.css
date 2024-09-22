@@ -1,18 +1,32 @@
 /* Style Sheet for home page*/
 
+/* entire screen container */
+.container{
+    display: flex;
+    height: 100vh;
+}
+
+/* sidebar container */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 100vh;
+}
+
 #logo {
     background-color: rgb(201, 199, 199);
     border-radius: 0 20px 0 0;
 }
- 
+
 /* Vertical Nav Bar */
 .navBar {
-    display: block;
     background-color:rgb(201, 199, 199);
     margin: 0;
     padding: 0;
     width: 200px;
     border-radius: 0 0 20px 0;
+    height: 100vh;
 }
  
 ul {
@@ -33,4 +47,11 @@ ul li a {
 #setting {
     font-size: 65px;
     color: grey;
+}
+
+/* main drawing canvas*/
+.mainCanvas {
+    flex-grow: 1;
+    height: 100vh;
+    background-color: white; 
 }
