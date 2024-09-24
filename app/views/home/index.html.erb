@@ -7,24 +7,8 @@ for general styling like the body. -->
 
 
 <div class="container">
-    <div class="sidebar">
 
-        <div id="logo" class="navBar">
-            <%= image_tag "Logo.png" %>
-        </div>
-
-        <div class="navBar">
-            <ul>
-                <li><a href="#"><i class="fa-solid fa-paintbrush" style="color: #ffffff; font-size: 40px;"></i></a></li>
-                <li><a href="#"><i class="fa-solid fa-eraser" style="color: #ffffff; font-size: 40px;"></i></a></li>
-                <li><a href="#"><i class="fa-solid fa-circle" style="color: #e32400; font-size: 40px;"></i></a></li>
-                <li><a href="#"><i class="fa-solid fa-circle" style="color: #74C0FC; font-size: 40px;"></i></a></li>
-                <li><a href="#"><i class="fa-solid fa-circle" style="color: #669c35; font-size: 40px;"></i></a></li>
-                <li><a href="#"><i class="fa-solid fa-circle" style="color: #FFD43B; font-size: 40px;"></i></a></li>
-                <li><a href="#"><span id="setting">&#9965</span></a></li>
-            </ul>
-        </div>
-    </div> 
+    <%= render "home/navBar" %>
 
     <canvas class="mainCanvas"></canvas> 
 </div> 
