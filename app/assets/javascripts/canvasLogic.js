@@ -4,21 +4,26 @@
 const canvas = document.getElementsByClassName("mainCanvas")[0]; 
 const context = canvas.getContext("2d"); 
 
-// Set mainCanvas dimensions based on monitor size
-canvas.width = window.innerWidth - 200; 
-canvas.height = window.innerHeight;
+// Set squareSize, and number of rows and cols
+const squareSize = 20; 
+const rows = 60; 
+const cols = 60; 
 
-// Set how big each square should be 
-const squareSize = 25; 
+// Set canvas size to ensure same grid size regardless of monitor or refresh 
+function resizeCanvas(){
+    canvas.width = cols * squareSize; 
+    canvas.height = rows * squareSize; 
+    drawGridLines(); 
+}
 
-// drawGridLines function
+// Does the drawing of the gridlines 
 function drawGridLines() {
 
     // line color and size
     context.strokeStyle = "black";
-    context.lineWidth = 0.5; 
+    context.lineWidth = 0.3; 
 
-    // Vertical 
+    // Vertical lines
     for(let x = 0; x <= canvas.width; x += squareSize){
         context.beginPath(); 
         context.moveTo(x, 0); 
@@ -26,7 +31,7 @@ function drawGridLines() {
         context.stroke(); 
     }
 
-    // Horizontal
+    // Horizontal lines
     for(let y = 0; y <= canvas.height; y += squareSize){
         context.beginPath(); 
         context.moveTo(0, y); 
@@ -35,5 +40,11 @@ function drawGridLines() {
     }
 }
 
-// Call functions 
-drawGridLines(); 
+function paintSquare() {
+    
+}
+
+// Event listners to update gridlines as window size changes
+window.addEventListener('load', resizeCanvas); 
+window.addEventListener('resize', resizeCanvas); 
+window.addEventListener('click', )
